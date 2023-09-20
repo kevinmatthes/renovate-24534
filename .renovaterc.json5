@@ -16,6 +16,12 @@
     ],
     packageRules: [
         {
+            extractVersion: "^v(?<version>.*)$",
+            matchPackageNames: [
+                "actionlint",
+            ],
+        },
+        {
             matchManagers: [
                 "regex",
             ],
