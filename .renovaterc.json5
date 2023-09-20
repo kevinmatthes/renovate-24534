@@ -1,0 +1,46 @@
+{
+    assignees: [
+        "kevinmatthes",
+    ],
+    automerge: false,
+    commitMessageLowerCase: "never",
+    commitMessagePrefix: "[Renovate]",
+    dependencyDashboard: true,
+    dependencyDashboardAutoclose: true,
+    dependencyDashboardLabels: [
+        "dependencies",
+    ],
+    dependencyDashboardTitle: "[Renovate] Dependency Dashboard",
+    labels: [
+        "documentation",
+    ],
+    packageRules: [
+        {
+            matchManagers: [
+                "regex",
+            ],
+            matchPackageNames: [
+                "actionlint",
+            ],
+        },
+        {
+            matchManagers: [
+                "github-actions",
+            ],
+        },
+    ],
+    regexManagers: [
+        {
+            datasourceTemplate: "github-releases",
+            depNameTemplate: "actionlint",
+            fileMatch: [
+                "^\\.github/workflows/ci\\.yml$",
+            ],
+            matchStrings: [
+                "rhysd/actionlint:(?<currentValue>\\d+\\.\\d+\\.\\d+)",
+            ],
+            packageNameTemplate: "rhysd/actionlint",
+        },
+    ],
+    schedule: null,
+}
